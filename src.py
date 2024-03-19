@@ -8,8 +8,8 @@ conn = psycopg2.connect(
     port="5432")
 conn.autocommit = True
 
-#add new student to table
-#inputs: first name, last name, email, enrollment date (yyyy-mm-dd)
+#add student to table
+#inputs: first name, last name, email, enrollment date (yyyy-mm-dd as string)
 def addStudent(first_name, last_name, email, enrollment_date):
     cursor = conn.cursor()
     cursor.execute(
